@@ -1,5 +1,10 @@
 # hermes-client-bundle
 
+## Installation
+```bash
+composer require classifieds-maciej/hermes-client-bundle
+```
+
 ## Configuration
 ```yaml
 # app/config/config.yml
