@@ -1,0 +1,26 @@
+{
+  "name": "classifieds-maciej/hermes-client-bundle",
+  "type": "symfony-bundle",
+  "description": "Hermes client bundle for Symfony 3 framework",
+  "minimum-stability": "alpha",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Maciej Wagner",
+      "email": "mac610@wp.pl"
+    }
+  ],
+  "require-dev": {
+    "phpunit/phpunit": "^6.2"
+  },
+  "require": {
+    "php": "^7.0.5",
+    "classifieds-maciej/hermes-client": "^0.1.0",
+    "symfony/framework-bundle": "^3.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "ClassifiedsMaciej\\HermesClientBundle\\": ""
+    }
+  }
+}
