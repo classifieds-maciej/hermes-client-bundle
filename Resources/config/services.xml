@@ -5,8 +5,14 @@
         http://symfony.com/schema/dic/services/services-1.0.xsd">
 
     <services>
+        <service id="guzzle_client" class="GuzzleHttp\Client" public="false" />
+
+        <service id="guzzle_sender" class="classifieds\maciej\hermes\client\SyncSender" public="false">
+            <argument type="service" id="guzzle_client" />
+        </service>
+
         <service id="hermes_client" class="classifieds\maciej\hermes\client\HermesClient">
-            <argument>classifieds\maciej\hermes\client\SyncSender</argument>
+            <argument type="service" id="guzzle_sender" />
             <argument></argument> <!-- will be filled in with retries dynamically -->
             <argument></argument> <!-- will be filled in with retry_sleep dynamically -->
         </service>

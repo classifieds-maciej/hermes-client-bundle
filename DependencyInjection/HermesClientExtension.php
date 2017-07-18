@@ -16,5 +16,12 @@ class HermesClientExtension extends Extension
             new FileLocator(__DIR__.'/../Resources/config')
         );
         $loader->load('services.xml');
+
+        $configuration = new Configuration();
+        $config = $this->processConfiguration($configuration, $configs);
+
+        $def = $container->getDefinition('hermes_client');
+        $def->replaceArgument(1, $config['retries']);
+        $def->replaceArgument(2, $config['retry_sleep']);
     }
 }
