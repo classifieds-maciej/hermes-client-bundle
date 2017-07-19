@@ -16,6 +16,7 @@ class Configuration implements ConfigurationInterface
                 ->scalarNode('base_url')->end()
                 ->integerNode('retries')->end()
                 ->integerNode('retry_sleep')->end()
+                ->arrayNode('guzzle')->end()
             ->end()
         ;
 

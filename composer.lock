@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "a7d61111e810ff85c7b9de29a8516b03",
+    "content-hash": "1bf74e87b2fae0c534b974cd8084370e",
     "packages": [
         {
             "name": "classifieds-maciej/hermes-client",
-            "version": "0.1.0",
+            "version": "0.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/classifieds-maciej/hermes-client.git",
-                "reference": "80d61d259ea1f45d8cfc9a6644ae22b77512d903"
+                "reference": "bb7f6728d4b83d9df657dc6b3fbbc800ec633893"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/classifieds-maciej/hermes-client/zipball/80d61d259ea1f45d8cfc9a6644ae22b77512d903",
-                "reference": "80d61d259ea1f45d8cfc9a6644ae22b77512d903",
+                "url": "https://api.github.com/repos/classifieds-maciej/hermes-client/zipball/bb7f6728d4b83d9df657dc6b3fbbc800ec633893",
+                "reference": "bb7f6728d4b83d9df657dc6b3fbbc800ec633893",
                 "shasum": ""
             },
             "require": {
@@ -43,7 +43,7 @@
                 }
             ],
             "description": "Hermes message bus client for PHP",
-            "time": "2017-07-18T10:10:36+00:00"
+            "time": "2017-07-19T10:54:32+00:00"
         },
         {
             "name": "doctrine/cache",

@@ -15,7 +15,7 @@
   },
   "require": {
     "php": "^7.0.5",
-    "classifieds-maciej/hermes-client": "^0.1.0",
+    "classifieds-maciej/hermes-client": "^0.2.0",
     "symfony/framework-bundle": "^3.0"
   },
   "autoload": {

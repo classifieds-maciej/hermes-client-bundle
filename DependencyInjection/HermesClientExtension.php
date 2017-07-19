@@ -20,8 +20,13 @@ class HermesClientExtension extends Extension
         $configuration = new Configuration();
         $config = $this->processConfiguration($configuration, $configs);
 
+        $def = $container->getDefinition('guzzle_client');
+        $def->replaceArgument(0, [
+            $config['guzzle'] ?? []
+        ]);
+
         $def = $container->getDefinition('hermes_client');
-        $def->replaceArgument(1, $config['retries']);
-        $def->replaceArgument(2, $config['retry_sleep']);
+        $def->replaceArgument(1, $config['retries'] ?? 3);
+        $def->replaceArgument(2, $config['retry_sleep'] ?? 10);
     }
 }
