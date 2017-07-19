@@ -26,7 +26,8 @@ class HermesClientExtension extends Extension
         ]);
 
         $def = $container->getDefinition('hermes_client');
-        $def->replaceArgument(1, $config['retries'] ?? 3);
-        $def->replaceArgument(2, $config['retry_sleep'] ?? 10);
+        $def->replaceArgument(1, $config['base_url']);
+        $def->replaceArgument(2, $config['retries'] ?? 3);
+        $def->replaceArgument(3, $config['retry_sleep'] ?? 10);
     }
 }

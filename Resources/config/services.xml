@@ -15,6 +15,7 @@
 
         <service id="hermes_client" class="classifieds\maciej\hermes\client\HermesClient">
             <argument type="service" id="guzzle_sender" />
+            <argument></argument> <!-- will be filled in with base_url dynamically -->
             <argument></argument> <!-- will be filled in with retries dynamically -->
             <argument></argument> <!-- will be filled in with retry_sleep dynamically -->
         </service>
