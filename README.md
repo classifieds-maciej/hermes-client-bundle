@@ -26,6 +26,7 @@ hermes_client:
 
 ## Usage
 ```php
+// Async publish
 $hermesClient = $this->get('hermes_client');
 $hermesClient->publishAsync(
     new HermesMessage('test.group.test_topic', [], 'test body'),
@@ -36,4 +37,10 @@ $hermesClient->publishAsync(
         echo $e->getMessage();
     }
 );
+```
+
+```php
+// Sync publish
+$hermesClient = $this->get('hermes_client');
+$response = $hermesClient->publish(new HermesMessage('test.group.test_topic', [], 'test body'));
 ```
