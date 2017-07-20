@@ -18,6 +18,7 @@ hermes_client:
     guzzle:
         timeout: 1.0
         connect_timeout: 1.0
+        http_errors: false
         (...)
     base_url: http://localhost:8080/topics/
     retries: 3
@@ -33,7 +34,7 @@ $hermesClient->publishAsync(
     function (HermesResponse $response) {
         echo "OK";
     },
-    function (RequestException $e) {
+    function (HermesException $e, HermesMessage $message) {
         echo $e->getMessage();
     }
 );
