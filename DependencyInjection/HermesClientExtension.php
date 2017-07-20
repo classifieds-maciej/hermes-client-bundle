@@ -21,6 +21,8 @@ class HermesClientExtension extends Extension
         $config = $this->processConfiguration($configuration, $configs);
 
         $def = $container->getDefinition('guzzle_client');
+        
+        $config['guzzle']['http_errors'] = $config['guzzle']['http_errors'] ?? false;
         $def->replaceArgument(0, [
             $config['guzzle'] ?? ['http_errors' => false]
         ]);
