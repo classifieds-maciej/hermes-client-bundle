@@ -22,7 +22,7 @@ class HermesClientExtension extends Extension
 
         $def = $container->getDefinition('guzzle_client');
         $def->replaceArgument(0, [
-            $config['guzzle'] ?? []
+            $config['guzzle'] ?? ['http_errors' => false]
         ]);
 
         $def = $container->getDefinition('hermes_client');
